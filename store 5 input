@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class FiveNumbers {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int[] numbers = new int[5];
+
+        System.out.print("Enter first number: ");
+        numbers[0] = input.nextInt();
+
+        System.out.print("Enter second number: ");
+        numbers[1] = input.nextInt();
+
+        System.out.print("Enter third number: ");
+        numbers[2] = input.nextInt();
+
+        System.out.print("Enter fourth number: ");
+        numbers[3] = input.nextInt();
+
+        System.out.print("Enter fifth number: ");
+        numbers[4] = input.nextInt();
+
+        System.out.println("The numbers are:");
+        System.out.println(numbers[0]);
+        System.out.println(numbers[1]);
+        System.out.println(numbers[2]);
+        System.out.println(numbers[3]);
+        System.out.println(numbers[4]);
+
+        input.close();
+    }
+}
