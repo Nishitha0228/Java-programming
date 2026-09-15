@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class SecondHighestAndLowest {
+    public static void main(String[] args) {
+
+        // This allows us to read numbers from the keyboard
+        Scanner input = new Scanner(System.in);
+
+        // Create an array that can store 5 numbers
+        int[] numbers = new int[5];
+
+        // Ask the user to enter 5 numbers
+        System.out.print("Enter first number: ");
+        numbers[0] = input.nextInt();
+
+        System.out.print("Enter second number: ");
+        numbers[1] = input.nextInt();
+
+        System.out.print("Enter third number: ");
+        numbers[2] = input.nextInt();
+
+        System.out.print("Enter fourth number: ");
+        numbers[3] = input.nextInt();
+
+        System.out.print("Enter fifth number: ");
+        numbers[4] = input.nextInt();
+
+        // Compare every number and arrange them from smallest to biggest
+        for (int i = 0; i < 5; i++) {
+            for (int j = i + 1; j < 5; j++) {
+
+                // If the first number is bigger, swap the two numbers
+                if (numbers[i] > numbers[j]) {
+                    int temporaryNumber = numbers[i];
+                    numbers[i] = numbers[j];
+                    numbers[j] = temporaryNumber;
+                }
+            }
+        }
+
+        // After sorting:
+        // numbers[0] is the lowest number
+        // numbers[1] is the second lowest number
+        // numbers[3] is the second highest number
+        // numbers[4] is the highest number
+        System.out.println("Second lowest number is: " + numbers[1]);
+        System.out.println("Second highest number is: " + numbers[3]);
+
+        input.close();
+    }
+}
