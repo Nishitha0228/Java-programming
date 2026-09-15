@@ -1,0 +1,36 @@
+import java.util.*;
+public class conditional_statements {
+    //Data members
+    int num;
+
+    //Default constructor
+    conditional_statements() {
+        this.num = 0;
+    }
+    //Parametrised constructor
+    conditional_statements(int num) {
+        this.num = num;
+    }
+    //Member methods or functions
+    void check() {
+        System.out.println("Value is "+this.num);
+        if (this.num > 0) {
+            System.out.println("POSITIVE");
+        } else if (this.num == 0) {
+            System.out.println("ZERO");
+        } else {
+            System.out.println("NEGATIVE");
+        }
+        System.out.println("Check completed");
+        return;
+    }
+    public static void main(String[] args) {
+        conditional_statements obj1 = new conditional_statements(5);
+        conditional_statements obj2 = new conditional_statements();
+        conditional_statements obj3 = new conditional_statements(-5);
+
+        obj1.check();
+        obj2.check();
+        obj3.check();                   
+    }
+}
